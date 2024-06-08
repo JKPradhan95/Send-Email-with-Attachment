@@ -4,7 +4,7 @@ import yagmail
 import os
 
 sender = 'senderdemo@gmail.com'
-receiver = 'receiverdemo@gmail.com'
+receiver = 'g5bdwc3m@flymail.tk'
 
 subject = 'This is the subject'
 
@@ -26,5 +26,5 @@ try:
     yag.send(to=receiver, subject=subject, contents=contents)
     print("Email Sent!")
     
-except Exception:
-    print(f"An error occurred: {Exception}")
+except Exception as e:
+    print(f"An error occurred: {e}")
