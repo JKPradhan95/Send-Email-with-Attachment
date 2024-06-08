@@ -2,10 +2,10 @@
 
 import yagmail
 import os
-import time
+
 
 sender = 'senderdemo@gmail.com'
-receiver = 'receiverdemo@gmail.com'
+receiver = 'g5bdwc3m@flymail.tk'
 
 subject = 'This is the subject'
 
@@ -21,13 +21,11 @@ else:
     print("PSWD environment variable is set.")
 
 try:
-    while True:
-        
-        yag = yagmail.SMTP(user=sender, password=password)
-        
-        yag.send(to=receiver, subject=subject, contents=contents)
-        print("Email Sent!")
-        time.sleep(60)
-        
+    yag = yagmail.SMTP(user=sender, password=password)
+    print("SMTP client initialized.")
+    
+    yag.send(to=receiver, subject=subject, contents=contents)
+    print("Email Sent!")
+    
 except Exception as e:
     print(f"An error occurred: {e}")
