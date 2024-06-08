@@ -2,20 +2,20 @@ import yagmail
 import os
 
 sender = 'senderdemo@gmail.com'
-receiver = 'g5bdwc3m@flymail.tk'
+receiver = 'afreioxtl@10mail.org'
 
 subject = 'This is the subject'
 
-contents = """
+contents = ["""
 Here is the content of the email
 Hi!
-"""
+""",'text.txt']
 
-password = os.getenv('PSWD')
+password = os.getenv('PASSWORD')
 if not password:
-    print("Error: PSWD environment variable not set.")
+    print("Error: PASSWORD environment variable not set.")
 else:
-    print("PSWD environment variable is set.")
+    print("PASSWORD environment variable is set.")
 
 try:
     yag = yagmail.SMTP(user=sender, password=password)
