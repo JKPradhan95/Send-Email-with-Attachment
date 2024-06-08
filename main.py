@@ -1,8 +1,5 @@
-
-
 import yagmail
 import os
-
 
 sender = 'senderdemo@gmail.com'
 receiver = 'g5bdwc3m@flymail.tk'
@@ -23,9 +20,9 @@ else:
 try:
     yag = yagmail.SMTP(user=sender, password=password)
     print("SMTP client initialized.")
-    
+
     yag.send(to=receiver, subject=subject, contents=contents)
     print("Email Sent!")
-    
+
 except Exception as e:
     print(f"An error occurred: {e}")
